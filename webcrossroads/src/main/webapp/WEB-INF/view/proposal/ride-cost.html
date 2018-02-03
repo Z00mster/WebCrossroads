@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ride cost calculation</title>
+        <link rel="stylesheet" type="text/css" href="../../../static/css/main.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../../../static/js/main.js"></script>
+    </head>
+
+    <body>
+	    <header>
+	        <h1>Ride cost calculation</h1>
+	        <a href="calculations.html">Go back</a>
+	    </header>
+	
+	    <main>
+	    	<form action="/ride-cost-calculation" method="post">
+		    	<table id="ride-cost-input-table">
+		        	<tr>
+		        		<td>Petrol cost</td>
+		        		<td>Petrol consumption</td>
+		        		<td>Distance</td>
+		        	</tr>
+		        	<tr>
+		        		<td><input /></td>
+		        		<td><input /></td>
+		        		<td><input /></td>
+		        	</tr>
+		        	<tr>
+		        		<td colspan="3"><input type="submit" value="Calculate" /></td>
+		        	</tr>
+		        </table>
+	    	</form>
+	    </main>
+	
+	    <footer>
+			Development by Marek Simon @ SimSoft | &copy; 2018
+	    </footer>
+    </body>
+</html>

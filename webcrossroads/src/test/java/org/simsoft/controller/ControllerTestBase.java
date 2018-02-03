@@ -33,15 +33,18 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
-@SuppressWarnings("SpringContextConfigurationInspection")
-@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/webCrossroads-servlet.xml")
+@ContextConfiguration({
+	"file:src/main/webapp/WEB-INF/spring/webCrossroads-servlet.xml",
+	"file:src/main/webapp/WEB-INF/spring/applicationContext.xml"
+})
 @WebAppConfiguration()
 @RunWith(SpringJUnit4ClassRunner.class)
 public abstract class ControllerTestBase {
 
     @Autowired
-    protected WebApplicationContext webApplicationContext;
+    private WebApplicationContext webApplicationContext;
     protected MockMvc mockMvc;
 
     @Before
@@ -57,6 +60,14 @@ public abstract class ControllerTestBase {
             return null;
         }
     }
-
+    
+    protected ResultActions doPost(String url) {
+        try {
+            return mockMvc.perform(post(url));
+        } catch (Exception ex) {
+            System.out.println("I failed, fuck this..");
+            return null;
+        }
+    }
 
 }

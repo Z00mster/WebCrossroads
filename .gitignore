@@ -1,0 +1,9 @@
+
+*.prefs
+webcrossroads/.project
+webcrossroads/.classpath
+webcrossroads/.settings/.jsdtscope
+webcrossroads/.settings/org.eclipse.wst.common.component
+webcrossroads/.settings/org.eclipse.wst.common.project.facet.core.xml
+webcrossroads/.settings/org.eclipse.wst.jsdt.ui.superType.container
+webcrossroads/.settings/org.eclipse.wst.jsdt.ui.superType.name
