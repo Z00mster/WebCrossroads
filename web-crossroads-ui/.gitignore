@@ -1,4 +1,6 @@
-/target/
 bin/
 .project
 .gitignore
+.settings/
+.classpath
+target/

@@ -1,9 +1,6 @@
-
-*.prefs
-webcrossroads/.project
-webcrossroads/.classpath
-webcrossroads/.settings/
-.idea/
 bin/
-*.project
-*.gitignore
+.project
+.gitignore
+.settings/
+.classpath
+target/
