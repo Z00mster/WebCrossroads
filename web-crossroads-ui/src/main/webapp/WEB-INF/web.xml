@@ -1,14 +1,12 @@
-<web-app>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
-
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>/WEB-INF/spring/applicationContext.xml</param-value>
   </context-param>
-
   <servlet>
     <description>Spring dispatcher for HTTP request controllers</description>
     <servlet-name>dispatcherServlet</servlet-name>
@@ -19,29 +17,8 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
-
   <servlet-mapping>
     <servlet-name>dispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-
-  <!--&lt;!&ndash; ####### &ndash;&gt;-->
-  <!--&lt;!&ndash; FILTERS &ndash;&gt;-->
-  <!--&lt;!&ndash; ####### &ndash;&gt;-->
-  <!--<filter>-->
-    <!--<filter-name>springSecurityFilterChain</filter-name>-->
-    <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
-  <!--</filter>-->
-
-  <!--<filter>-->
-    <!--<filter-name>httpPutFilter</filter-name>-->
-    <!--<filter-class>org.springframework.web.filter.HttpPutFormContentFilter</filter-class>-->
-  <!--</filter>-->
-
-  <!--<filter-mapping>-->
-    <!--<filter-name>springSecurityFilterChain</filter-name>-->
-    <!--<filter-name>httpPutFilter</filter-name>-->
-    <!--<url-pattern>/*</url-pattern>-->
-  <!--</filter-mapping>-->
-
 </web-app>
